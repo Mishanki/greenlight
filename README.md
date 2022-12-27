@@ -1,3 +1,6 @@
+# REST API
+#### Personal education via book "Lets`s Go Further"
+
 ### File and folder names
 
 - The `bin` directory will contain our compiled application binaries, ready for deployment to a production server.
@@ -7,3 +10,7 @@
 production server.
 - The `go.mod` file will declare our project dependencies, versions and module path.
 - The `Makefile` will contain <em>recipes</em> for automating common administrative tasks — like auditing our Go code, building binaries, and executing database migrations.
+
+### Usage 
+
+...
