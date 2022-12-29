@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    build:
+      context: .
+      dockerfile: _docker/local/db/Dockerfile
+    container_name: greenlight_db
+    volumes:
+      - ./tmp/greenlight_postgresql_db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 9912:5432
