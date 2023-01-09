@@ -1,7 +1,7 @@
 # REST API
 #### Personal education via book "Lets`s Go Further"
 
-### File and folder names
+## File and folder names
 
 - The `bin` directory will contain our compiled application binaries, ready for deployment to a production server.
 - The `cmd/api` directory will contain the application-specific code for our Greenlight API application. This will include the code for running the server, reading and writing HTTP requests, and managing authentication.
@@ -11,6 +11,25 @@ production server.
 - The `go.mod` file will declare our project dependencies, versions and module path.
 - The `Makefile` will contain <em>recipes</em> for automating common administrative tasks — like auditing our Go code, building binaries, and executing database migrations.
 
-### Usage 
+## How to use 
 
-...
+Download dependency
+
+```bash
+go mod download
+```
+
+Install the package
+```bash
+go install -v ./...
+```
+
+Install migration tools (Mac OS)
+```bash
+brew install golang-migrate
+```
+
+Up migration
+```bash
+migrate -path=./migrations -database=$EXAMPLE_DSN up
+```
