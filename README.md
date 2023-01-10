@@ -31,5 +31,5 @@ brew install golang-migrate
 
 Up migration
 ```bash
-migrate -path=./migrations -database=$EXAMPLE_DSN up
+migrate -path ./migrations -database "postgresql://login:password@localhost:9912/greenlight?sslmode=disable" up
 ```
