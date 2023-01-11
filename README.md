@@ -1,4 +1,12 @@
 # REST API
+- Routing
+- Validation
+- Migration
+- Models
+- Rate Limiter
+- Logger
+- Graceful Shutdown
+
 #### Personal education via book "Lets`s Go Further"
 
 ## File and folder names
