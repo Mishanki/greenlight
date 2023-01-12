@@ -6,6 +6,7 @@
 - Rate Limiter
 - Logger
 - Graceful Shutdown
+- Background Tasks
 
 #### Personal education via book "Lets`s Go Further"
 
