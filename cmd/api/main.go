@@ -11,6 +11,7 @@ import (
 	"greenlight/internal/mailer"
 	"log"
 	"os"
+	"sync"
 	"time"
 )
 
@@ -46,6 +47,7 @@ type application struct {
 	logger *jsonlog.Logger
 	models data.Models
 	mailer mailer.Mailer
+	wg     sync.WaitGroup
 }
 
 func init() {

@@ -7,6 +7,7 @@
 - Logger
 - Graceful Shutdown
 - Background Tasks
+- Tokens
 
 #### Personal education via book "Lets`s Go Further"
 
@@ -33,7 +34,7 @@ Install the package
 go install -v ./...
 ```
 
-Install migration tools (Mac OS)
+Install migration tools (macOS)
 ```bash
 brew install golang-migrate
 ```
