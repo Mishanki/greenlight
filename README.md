@@ -8,6 +8,7 @@
 - Graceful Shutdown
 - Background Tasks
 - Tokens
+- Permissions
 
 #### Personal education via book "Lets`s Go Further"
 
