@@ -1,5 +1,9 @@
-# Include variables from the .envrc file
+# Include environment variables from the .envrc file
 include .envrc
+
+# =========================== #
+# HELPERS
+# =========================== #
 
 ## help: print this help message
 .PHONY: help
@@ -10,6 +14,10 @@ help:
 .PHONY: confirm
 confirm:
 	@echo -n 'Are you sure? [y/N] ' && read ans && [ $${ans:-N} = y ]
+
+# =========================== #
+# DEV
+# =========================== #
 
 ## run: run the cmd/api application
 .PHONY: run/api
@@ -32,3 +40,21 @@ migration/up: confirm
 migration/new:
 	@echo 'Creating migration files for ${name}...'
 	migrate create -seq -ext=.sql -dir=./migrations ${name}
+
+# =========================== #
+# QUALITY CONTROL
+# =========================== #
+
+## audit: tidy dependencies and format, vet and test all code
+.PHONY: audit
+audit:
+	@echo 'Tidying and verifying module dependencies...'
+	go mod tidy
+	go mod verify
+	@echo 'Formatting code...'
+	go fmt ./...
+	@echo 'Vetting code...'
+	go vet ./...
+	staticcheck ./...
+	@echo 'Running tests...'
+	go test -race -vet=off ./...

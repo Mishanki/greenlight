@@ -70,3 +70,20 @@ Print makefile help messages
 ```bash
 make help
 ```
+
+### Quality audit
+
+Tools list:
+
+- Use the `go mod tidy` command to prune any unused dependencies from the `go.mod` and `go.sum` files, and add any missing dependencies.
+- Use the `go mod verify` command to check that the dependencies on your computer haven’t been changed.
+- Use the `go fmt ./...` command to format all .go files in the project directory, according to the Go standard.
+- Use the `go vet ./...` command to check all `.go` files in the project directory. Runs a variety of analyzers which carry out static analysis of your code and warn you about things which might be wrong but won’t be picked up by the compiler.
+- Use the `go test -race -vet=off ./...` command to run all tests in the project directory.
+- Use the third-party `staticcheck` tool to carry out some additional static analysis checks.
+
+Run audit
+
+```bash
+make audit
+```
