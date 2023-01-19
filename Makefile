@@ -1,3 +1,6 @@
+# Include variables from the .envrc file
+include .envrc
+
 ## help: print this help message
 .PHONY: help
 help:
@@ -16,13 +19,13 @@ run/api:
 ## db: connect to the database using psql
 .PHONY: db
 db:
-	psql postgres://postgres:postgres@localhost:9912/greenlight?sslmode=disable
+	psql ${GREENLIGHT_DB_DSN}
 
 ## migration/up: confirm
 .PHONY: migration/up
 migration/up: confirm
 	@echo 'Running up migrations...'
-	migrate -path ./migrations -database "postgresql://postgres:postgres@localhost:9912/greenlight?sslmode=disable" up
+	migrate -path ./migrations -database ${GREENLIGHT_DB_DSN} up
 
 ## migration/new name=$1: create a new database migration
 .PHONY: migration/new
