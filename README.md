@@ -11,6 +11,7 @@
 - Permissions
 - Cors
 - Metrics (expvar, httpsnoop)
+- Makefile
 
 #### Personal education via book "Lets`s Go Further"
 
@@ -24,7 +25,9 @@ production server.
 - The `go.mod` file will declare our project dependencies, versions and module path.
 - The `Makefile` will contain <em>recipes</em> for automating common administrative tasks — like auditing our Go code, building binaries, and executing database migrations.
 
-## How to use 
+## How to use
+
+### Install
 
 Download dependency
 
@@ -42,7 +45,25 @@ Install migration tools (macOS)
 brew install golang-migrate
 ```
 
+### Migration
+
 Up migration
 ```bash
 migrate -path ./migrations -database "postgresql://login:password@localhost:9912/greenlight?sslmode=disable" up
 ```
+Up migration via makefile
+```bash
+make up
+```
+
+Creating migration files
+```bash
+make migration name=create_example_table
+```
+
+### Run project
+Run via makefile
+```bash
+make run
+```
+
