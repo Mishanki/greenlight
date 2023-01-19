@@ -47,14 +47,14 @@ brew install golang-migrate
 
 ### Migration
 
-Up migration
-```bash
-make migration/up
-```
-
-Creating migration files
+Creating migration
 ```bash
 make migration/new name=create_example_table
+```
+
+Up
+```bash
+make migration/up
 ```
 
 ### Run or build project
@@ -84,8 +84,6 @@ make help
 - `go vet ./...` command to check all `.go` files in the project directory. Runs a variety of analyzers which carry out static analysis of your code and warn you about things which might be wrong but won’t be picked up by the compiler.
 - `go test -race -vet=off ./...` command to run all tests in the project directory.
 - Third-party `staticcheck` tool to carry out some additional static analysis checks.
-
-Run audit
 
 ```bash
 make audit
