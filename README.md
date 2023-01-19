@@ -53,12 +53,12 @@ migrate -path ./migrations -database "postgresql://login:password@localhost:9912
 ```
 Up migration via makefile
 ```bash
-make up
+make migration/up
 ```
 
-Creating migration files
+Creating migration files via makefile
 ```bash
-make migration name=create_example_table
+make migration/new name=create_example_table
 ```
 
 ### Run project
