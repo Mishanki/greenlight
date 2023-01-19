@@ -9,6 +9,8 @@
 - Background Tasks
 - Tokens
 - Permissions
+- Cors
+- Metrics (expvar, httpsnoop)
 
 #### Personal education via book "Lets`s Go Further"
 
