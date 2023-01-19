@@ -60,7 +60,7 @@ make migration/new name=create_example_table
 ### Run project
 Run
 ```bash
-make run
+make run/api
 ```
 
 ### Other
