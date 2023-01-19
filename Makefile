@@ -14,7 +14,7 @@ run:
 db:
 	psql postgres://postgres:postgres@localhost:9912/greenlight?sslmode=disable
 
-## db/migration/up: confirm
+## migration/up: confirm
 migration/up: confirm
 	@echo 'Running up migrations...'
 	migrate -path ./migrations -database "postgresql://postgres:postgres@localhost:9912/greenlight?sslmode=disable" up

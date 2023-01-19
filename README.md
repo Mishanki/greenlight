@@ -49,21 +49,24 @@ brew install golang-migrate
 
 Up migration
 ```bash
-migrate -path ./migrations -database "postgresql://login:password@localhost:9912/greenlight?sslmode=disable" up
-```
-Up migration via makefile
-```bash
 make migration/up
 ```
 
-Creating migration files via makefile
+Creating migration files
 ```bash
 make migration/new name=create_example_table
 ```
 
 ### Run project
-Run via makefile
+Run
 ```bash
 make run
 ```
 
+### Other
+
+Print makefile help messages
+
+```bash
+make help
+```
