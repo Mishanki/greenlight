@@ -57,10 +57,15 @@ Creating migration files
 make migration/new name=create_example_table
 ```
 
-### Run project
+### Run or build project
 Run
 ```bash
 make run/api
+```
+
+Build
+```bash
+make build/api
 ```
 
 ### Other
